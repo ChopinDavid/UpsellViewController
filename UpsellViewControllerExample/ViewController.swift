@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         upsellVC.isAutoScrollEnabled = false
         
         //Change the page control tint colors
-        upsellVC.pageIndicatorTintColor = .systemIndigo
+        upsellVC.pageIndicatorTintColor = .blue
         upsellVC.currentPageIndicatorTintColor = .green
         
         let cancel = UpsellAction(title: "Cancel", style: .cancel)
