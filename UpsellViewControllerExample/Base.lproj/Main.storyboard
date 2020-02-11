@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vQ1-od-GxK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="cAR-n0-R3Q">
+            <objects>
+                <viewController id="vQ1-od-GxK" customClass="ViewController" customModule="UpsellViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ipm-rV-7dI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rx9-ba-k2i">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                <color key="backgroundColor" red="0.31764705879999999" green="0.73725490199999999" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZl-Jd-QH1">
+                                <rect key="frame" x="0.0" y="448" width="414" height="448"/>
+                                <color key="backgroundColor" red="0.33333333329999998" green="0.77647058820000003" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bandMateBgNoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ulG-Zh-NN0">
+                                <rect key="frame" x="0.0" y="119.5" width="414" height="657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ulG-Zh-NN0" secondAttribute="height" multiplier="512:813" id="el1-j6-JFa"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivX-Ad-Cto">
+                                <rect key="frame" x="107" y="433" width="200" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="gj9-PD-9Xk"/>
+                                </constraints>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <state key="normal" title="Present Upsell VC 1">
+                                    <color key="titleColor" red="0.31764705879999999" green="0.73725490199999999" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="presentUpsellVC1ButtonPressed:" destination="vQ1-od-GxK" eventType="touchUpInside" id="SM6-BD-ZH1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C03-SA-CiI">
+                                <rect key="frame" x="107" y="503" width="200" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="yRb-we-Bin"/>
+                                </constraints>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <state key="normal" title="Present Upsell VC 2">
+                                    <color key="titleColor" red="0.31764705879999999" green="0.73725490199999999" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="presentUpsellVC2ButtonPressed:" destination="vQ1-od-GxK" eventType="touchUpInside" id="bmg-Ny-cLv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ivX-Ad-Cto" firstAttribute="centerY" secondItem="Ipm-rV-7dI" secondAttribute="centerY" id="Dtc-hp-MtG"/>
+                            <constraint firstItem="ulG-Zh-NN0" firstAttribute="leading" secondItem="o8D-V7-Wv1" secondAttribute="leading" id="EVX-lg-SXK"/>
+                            <constraint firstItem="o8D-V7-Wv1" firstAttribute="trailing" secondItem="aZl-Jd-QH1" secondAttribute="trailing" id="Ij2-M4-sWs"/>
+                            <constraint firstItem="o8D-V7-Wv1" firstAttribute="trailing" secondItem="Rx9-ba-k2i" secondAttribute="trailing" id="IzS-yp-S9W"/>
+                            <constraint firstItem="o8D-V7-Wv1" firstAttribute="trailing" secondItem="ulG-Zh-NN0" secondAttribute="trailing" id="J2s-L5-ooe"/>
+                            <constraint firstAttribute="bottom" secondItem="aZl-Jd-QH1" secondAttribute="bottom" id="Njq-9y-3OX"/>
+                            <constraint firstItem="C03-SA-CiI" firstAttribute="top" secondItem="ivX-Ad-Cto" secondAttribute="bottom" constant="40" id="PvR-qL-67F"/>
+                            <constraint firstItem="aZl-Jd-QH1" firstAttribute="top" secondItem="Ipm-rV-7dI" secondAttribute="centerY" id="UjM-fz-SfC"/>
+                            <constraint firstItem="ivX-Ad-Cto" firstAttribute="centerX" secondItem="Ipm-rV-7dI" secondAttribute="centerX" id="WDI-2E-Uvx"/>
+                            <constraint firstItem="aZl-Jd-QH1" firstAttribute="leading" secondItem="o8D-V7-Wv1" secondAttribute="leading" id="WOE-9w-cU0"/>
+                            <constraint firstItem="ulG-Zh-NN0" firstAttribute="centerX" secondItem="Ipm-rV-7dI" secondAttribute="centerX" id="X6R-I8-yaW"/>
+                            <constraint firstItem="C03-SA-CiI" firstAttribute="centerX" secondItem="Ipm-rV-7dI" secondAttribute="centerX" id="XCX-3R-nEa"/>
+                            <constraint firstAttribute="centerY" secondItem="Rx9-ba-k2i" secondAttribute="bottom" id="cjj-32-bUA"/>
+                            <constraint firstItem="Rx9-ba-k2i" firstAttribute="leading" secondItem="o8D-V7-Wv1" secondAttribute="leading" id="eIe-We-5DR"/>
+                            <constraint firstItem="Rx9-ba-k2i" firstAttribute="top" secondItem="Ipm-rV-7dI" secondAttribute="top" id="ptE-ta-doN"/>
+                            <constraint firstItem="ulG-Zh-NN0" firstAttribute="centerY" secondItem="Ipm-rV-7dI" secondAttribute="centerY" id="vpb-k2-iRH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o8D-V7-Wv1"/>
+                    </view>
+                    <connections>
+                        <outlet property="presentUpsellVC1Button" destination="ivX-Ad-Cto" id="7yS-OA-0Wr"/>
+                        <outlet property="presentUpsellVC2Button" destination="C03-SA-CiI" id="tfb-aw-dIm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="573-gJ-hjG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="-37.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bandMateBgNoLogo" width="2048" height="3252"/>
+    </resources>
+</document>
