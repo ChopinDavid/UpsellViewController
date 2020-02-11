@@ -64,7 +64,7 @@ Customizable view controller for promoting your app's products to users.
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "10.0"
+  # spec.platform     = :ios, "11.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
