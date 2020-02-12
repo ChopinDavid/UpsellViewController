@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipH-0D-4yx">
-                    <rect key="frame" x="25" y="176" width="364" height="544"/>
+                    <rect key="frame" x="25" y="172" width="364" height="552"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer a Friend and You'll Both Get Bandmate Plus, for Life!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vle-QX-sv2">
                             <rect key="frame" x="20" y="20" width="324" height="41"/>
@@ -68,8 +69,8 @@
                             <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="currentPageIndicatorTintColor" red="0.33333333329999998" green="0.77647058820000003" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </pageControl>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1mf-e9-XcA">
-                            <rect key="frame" x="0.0" y="484" width="364" height="60"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1mf-e9-XcA">
+                            <rect key="frame" x="8" y="484" width="348" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="5HP-wq-hdQ"/>
                             </constraints>
@@ -77,13 +78,13 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="1mf-e9-XcA" firstAttribute="leading" secondItem="ipH-0D-4yx" secondAttribute="leading" id="0ih-L4-Eoe"/>
+                        <constraint firstItem="1mf-e9-XcA" firstAttribute="leading" secondItem="ipH-0D-4yx" secondAttribute="leading" constant="8" id="0ih-L4-Eoe"/>
                         <constraint firstItem="vle-QX-sv2" firstAttribute="centerX" secondItem="ipH-0D-4yx" secondAttribute="centerX" id="2JX-jU-Vuz"/>
                         <constraint firstItem="DNk-84-u2a" firstAttribute="top" secondItem="3wg-4f-8Hm" secondAttribute="bottom" constant="8" id="5yu-83-S9L"/>
                         <constraint firstItem="DNk-84-u2a" firstAttribute="centerX" secondItem="ipH-0D-4yx" secondAttribute="centerX" id="9D7-Fe-591"/>
-                        <constraint firstAttribute="bottom" secondItem="1mf-e9-XcA" secondAttribute="bottom" id="KQA-jw-sGC"/>
+                        <constraint firstAttribute="bottom" secondItem="1mf-e9-XcA" secondAttribute="bottom" constant="8" id="Ire-16-L4o"/>
                         <constraint firstAttribute="trailing" secondItem="3wg-4f-8Hm" secondAttribute="trailing" id="Kit-zV-0ox"/>
-                        <constraint firstAttribute="trailing" secondItem="1mf-e9-XcA" secondAttribute="trailing" id="MNb-LF-aPt"/>
+                        <constraint firstAttribute="trailing" secondItem="1mf-e9-XcA" secondAttribute="trailing" constant="8" id="MNb-LF-aPt"/>
                         <constraint firstItem="3wg-4f-8Hm" firstAttribute="leading" secondItem="ipH-0D-4yx" secondAttribute="leading" id="X8d-KC-Jln"/>
                         <constraint firstItem="3wg-4f-8Hm" firstAttribute="top" secondItem="Wkw-AT-4KX" secondAttribute="bottom" id="YgW-bk-pgW"/>
                         <constraint firstItem="vle-QX-sv2" firstAttribute="leading" secondItem="ipH-0D-4yx" secondAttribute="leading" constant="20" id="a7R-In-cn1"/>

@@ -84,6 +84,10 @@ present(upsellVC, animated: false, completion: nil)
 //Initialize your UpsellViewController
 let upsellVC = UpsellViewController(title: "Some title", subtitle: "Some subtitle", promoView: promoView, numberOfPages: 3)
 
+//Change the title/subtitle colors
+upsellVC.titleLabel.textColor = UIColor.blue
+upsellVC.subtitleLabel.textColor = UIColor.green
+
 //Toggle autoscroll...
 upsellVC.isAutoScrollEnabled = false
 upsellVC.isAutoScrollEnabled = true
@@ -100,6 +104,30 @@ upsellVC.pageIndicatorTintColor = .blue
 upsellVC.currentPageIndicatorTintColor = .green
 
 //Then go ahead and add your actions for your user to interact with your UpsellViewController
+```
+
+#### Customize your UpsellActions
+
+```swift
+//Crate your button
+let oneMonth = UpsellAction(title: "1 MONTH", style: .default) {
+    print("Subscribing for one month")
+}
+
+//Hide the separator
+oneMonth.showSeparator = false
+
+//Set the button's corner radius, as a fraction of the button's height (0.5 will round your button's corners)
+oneMonth.cornerRadius = 0.5
+
+//Set the button's background color
+oneMonth.backgroundColor = UIColor(red: 81/255, green: 189/255, blue: 209/255, alpha: 1)
+
+//Change the button's title color
+oneMonth.setTitleColor(.white, for: .normal)
+
+//Add the action to your UpsellViewController
+upsellVC.addAction(oneMonth)
 ```
 
 ## Contributing

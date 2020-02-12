@@ -21,6 +21,9 @@ public class UpsellAction: UIButton {
     
     var separator = UIView()
     
+    public var showSeparator: Bool = true
+    public var cornerRadius: CGFloat!
+    
     init(){
         self.actionStyle = .cancel
         super.init(frame: CGRect.zero)
@@ -36,12 +39,21 @@ public class UpsellAction: UIButton {
         
         self.actionStyle = style
         style == .default ? (self.setTitleColor(UIColor(red: 81/255, green: 189/255, blue: 209/255, alpha: 1), for: UIControl.State())) : (self.setTitleColor(UIColor.gray, for: UIControl.State()))
-        
-        self.addSeparator()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        if showSeparator {
+            self.addSeparator()
+        }
+        
+        if cornerRadius != nil {
+            self.layer.cornerRadius = self.frame.height * cornerRadius
+        }
     }
     
     @objc func tapped(_ sender: UpsellAction) {
@@ -56,7 +68,7 @@ public class UpsellAction: UIButton {
         
         // Autolayout separator
         separator.translatesAutoresizingMaskIntoConstraints = false
-        separator.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        separator.topAnchor.constraint(equalTo: self.topAnchor, constant: -4).isActive = true
         separator.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: 8).isActive = true
         separator.trailingAnchor.constraint(equalTo: self.layoutMarginsGuide.trailingAnchor, constant: -8).isActive = true
         separator.heightAnchor.constraint(equalToConstant: 1).isActive = true

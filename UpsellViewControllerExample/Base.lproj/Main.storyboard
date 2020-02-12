@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vQ1-od-GxK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="cAR-n0-R3Q">
             <objects>
-                <viewController id="vQ1-od-GxK" customClass="ViewController" customModule="UpsellViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vQ1-od-GxK" customClass="ViewController" customModule="UpsellViewControllerExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ipm-rV-7dI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,15 +58,30 @@
                                     <action selector="presentUpsellVC2ButtonPressed:" destination="vQ1-od-GxK" eventType="touchUpInside" id="bmg-Ny-cLv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4s-cp-04C">
+                                <rect key="frame" x="107" y="573" width="200" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Fsb-8P-0SA"/>
+                                </constraints>
+                                <state key="normal" title="Present Upsell VC 3">
+                                    <color key="titleColor" red="0.31764705879999999" green="0.73725490199999999" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="presentUpsellVC3ButtonPresseed:" destination="vQ1-od-GxK" eventType="touchUpInside" id="FFK-5n-C1i"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ivX-Ad-Cto" firstAttribute="centerY" secondItem="Ipm-rV-7dI" secondAttribute="centerY" id="Dtc-hp-MtG"/>
                             <constraint firstItem="ulG-Zh-NN0" firstAttribute="leading" secondItem="o8D-V7-Wv1" secondAttribute="leading" id="EVX-lg-SXK"/>
+                            <constraint firstItem="T4s-cp-04C" firstAttribute="centerX" secondItem="Ipm-rV-7dI" secondAttribute="centerX" id="F4s-nj-dmy"/>
                             <constraint firstItem="o8D-V7-Wv1" firstAttribute="trailing" secondItem="aZl-Jd-QH1" secondAttribute="trailing" id="Ij2-M4-sWs"/>
                             <constraint firstItem="o8D-V7-Wv1" firstAttribute="trailing" secondItem="Rx9-ba-k2i" secondAttribute="trailing" id="IzS-yp-S9W"/>
                             <constraint firstItem="o8D-V7-Wv1" firstAttribute="trailing" secondItem="ulG-Zh-NN0" secondAttribute="trailing" id="J2s-L5-ooe"/>
                             <constraint firstAttribute="bottom" secondItem="aZl-Jd-QH1" secondAttribute="bottom" id="Njq-9y-3OX"/>
+                            <constraint firstItem="T4s-cp-04C" firstAttribute="top" secondItem="C03-SA-CiI" secondAttribute="bottom" constant="40" id="Oa5-hd-dPX"/>
                             <constraint firstItem="C03-SA-CiI" firstAttribute="top" secondItem="ivX-Ad-Cto" secondAttribute="bottom" constant="40" id="PvR-qL-67F"/>
                             <constraint firstItem="aZl-Jd-QH1" firstAttribute="top" secondItem="Ipm-rV-7dI" secondAttribute="centerY" id="UjM-fz-SfC"/>
                             <constraint firstItem="ivX-Ad-Cto" firstAttribute="centerX" secondItem="Ipm-rV-7dI" secondAttribute="centerX" id="WDI-2E-Uvx"/>
@@ -82,6 +98,7 @@
                     <connections>
                         <outlet property="presentUpsellVC1Button" destination="ivX-Ad-Cto" id="7yS-OA-0Wr"/>
                         <outlet property="presentUpsellVC2Button" destination="C03-SA-CiI" id="tfb-aw-dIm"/>
+                        <outlet property="presentUpsellVC3Button" destination="T4s-cp-04C" id="qbp-5O-Vpm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="573-gJ-hjG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

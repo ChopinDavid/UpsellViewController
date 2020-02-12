@@ -13,11 +13,13 @@ import UpsellViewController
 class ViewController: UIViewController {
     @IBOutlet var presentUpsellVC1Button: UIButton!
     @IBOutlet var presentUpsellVC2Button: UIButton!
+    @IBOutlet var presentUpsellVC3Button: UIButton!
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         presentUpsellVC1Button.layer.cornerRadius = presentUpsellVC1Button.frame.height / 2
         presentUpsellVC2Button.layer.cornerRadius = presentUpsellVC2Button.frame.height / 2
+        presentUpsellVC3Button.layer.cornerRadius = presentUpsellVC3Button.frame.height / 2
     }
     
     @IBAction func presentUpsellVC1ButtonPressed(_ sender: Any) {
@@ -84,6 +86,44 @@ class ViewController: UIViewController {
             self.present(activityViewController, animated: true, completion: nil)
         }
         upsellVC.addAction(referAFriend)
+        present(upsellVC, animated: false, completion: nil)
+    }
+    
+    @IBAction func presentUpsellVC3ButtonPresseed(_ sender: Any) {
+        //Get all views in the xib
+        let allViewsInXibArray = Bundle.main.loadNibNamed("PromoView3", owner: self, options: nil)
+        
+        //If you only have one view in the xib and you set it's class to MyView class
+        let promoView = allViewsInXibArray!.first as! UIView
+        let upsellVC = UpsellViewController(title: "Get Bandmate Plus", subtitle: nil, promoView: promoView, numberOfPages: 2)
+        
+        //Change the title color
+        upsellVC.titleLabel.textColor = UIColor(red: 81/255, green: 189/255, blue: 209/255, alpha: 1)
+        
+        //Add custom action buttons
+        let oneMonth = UpsellAction(title: "1 MONTH", style: .default) {
+            print("Subscribing for one month")
+        }
+        oneMonth.showSeparator = false
+        oneMonth.cornerRadius = 0.5
+        oneMonth.backgroundColor = UIColor(red: 81/255, green: 189/255, blue: 209/255, alpha: 1)
+        oneMonth.setTitleColor(.white, for: .normal)
+        upsellVC.addAction(oneMonth)
+        
+        let threeMonths = UpsellAction(title: "3 MONTHS (20% cheaper)", style: .default) {
+            print("Subscribing for three months")
+        }
+        threeMonths.showSeparator = false
+        threeMonths.cornerRadius = 0.5
+        threeMonths.backgroundColor = UIColor(red: 81/255, green: 189/255, blue: 209/255, alpha: 1)
+        threeMonths.setTitleColor(.white, for: .normal)
+        upsellVC.addAction(threeMonths)
+        
+        let noThanks = UpsellAction(title: "No Thanks", style: .cancel)
+        noThanks.showSeparator = false
+        noThanks.setTitleColor(.darkGray, for: .normal)
+        upsellVC.addAction(noThanks)
+        
         present(upsellVC, animated: false, completion: nil)
     }
 }

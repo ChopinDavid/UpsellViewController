@@ -10,8 +10,8 @@ import UIKit
 
 public class UpsellViewController: UIViewController {
     @IBOutlet var contentView: UIView!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var subtitleLabel: UILabel!
+    @IBOutlet public var titleLabel: UILabel!
+    @IBOutlet public var subtitleLabel: UILabel!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var scrollContentView: UIView!
@@ -37,7 +37,7 @@ public class UpsellViewController: UIViewController {
     public var autoScrollBuffer: TimeInterval = 4.0
     public var autoScrollSpeed: TimeInterval = 0.75
     
-    @objc public convenience init(title: String, subtitle: String, promoView: UIView, numberOfPages: Int) {
+    @objc public convenience init(title: String, subtitle: String?, promoView: UIView, numberOfPages: Int) {
         self.init()
         guard let nib = loadNibUpsellController(), let unwrappedView = nib[0] as? UIView else { return }
         self.view = unwrappedView
@@ -58,10 +58,19 @@ public class UpsellViewController: UIViewController {
     override public func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        layoutScrollContentView()
-        
-        pageControl.pageIndicatorTintColor = pageIndicatorTintColor
-        pageControl.currentPageIndicatorTintColor = currentPageIndicatorTintColor
+        if numberOfPages == 0 {
+            fatalError("UpsellViewControllers must have at least 1 page")
+        } else {
+            if numberOfPages == 1 {
+                pageControl.isHidden = true
+                isAutoScrollEnabled = false
+                scrollView.isScrollEnabled = false
+            } else {
+                pageControl.pageIndicatorTintColor = pageIndicatorTintColor
+                pageControl.currentPageIndicatorTintColor = currentPageIndicatorTintColor
+            }
+            layoutScrollContentView()
+        }
     }
     
     override public func viewDidAppear(_ animated: Bool) {

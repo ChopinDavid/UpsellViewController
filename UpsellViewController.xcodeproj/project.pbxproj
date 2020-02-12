@@ -20,6 +20,7 @@
 		639CC7AB23F33E780078CB0E /* PromoView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639CC7AA23F33E780078CB0E /* PromoView2.xib */; };
 		639CC7B223F340720078CB0E /* UpsellViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639CC77C23F33C6D0078CB0E /* UpsellViewController.framework */; };
 		639CC7B323F340720078CB0E /* UpsellViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 639CC77C23F33C6D0078CB0E /* UpsellViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		639CC81B23F483320078CB0E /* PromoView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639CC81A23F483320078CB0E /* PromoView3.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		639CC7A423F33D4D0078CB0E /* UpsellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpsellViewController.xib; sourceTree = "<group>"; };
 		639CC7A623F33E4C0078CB0E /* PromoView1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoView1.xib; sourceTree = "<group>"; };
 		639CC7AA23F33E780078CB0E /* PromoView2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoView2.xib; sourceTree = "<group>"; };
+		639CC81A23F483320078CB0E /* PromoView3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoView3.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				639CC79B23F33CB10078CB0E /* Info.plist */,
 				639CC7A623F33E4C0078CB0E /* PromoView1.xib */,
 				639CC7AA23F33E780078CB0E /* PromoView2.xib */,
+				639CC81A23F483320078CB0E /* PromoView3.xib */,
 			);
 			path = UpsellViewControllerExample;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				639CC81B23F483320078CB0E /* PromoView3.xib in Resources */,
 				639CC7A723F33E4C0078CB0E /* PromoView1.xib in Resources */,
 				639CC79A23F33CB10078CB0E /* LaunchScreen.storyboard in Resources */,
 				639CC79723F33CB10078CB0E /* Assets.xcassets in Resources */,
