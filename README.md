@@ -40,7 +40,7 @@ $ gem install cocoapods
 To integrate `UpsellViewController` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 ```ruby
 target 'MyApp' do
-pod 'UpsellViewController', '~> 1.0.2'
+pod 'UpsellViewController', '~> 1.0.3'
 end
 ```
 Then, run the following command:
