@@ -44,7 +44,7 @@ To integrate `UpsellViewController` into your Xcode project using CocoaPods, spe
 
 ```ruby
 target 'MyApp' do
-pod 'Upsel
+pod 'UpsellViewController', '~> 1.0.2'
 end
 ```
 
