@@ -19,9 +19,9 @@ Customizable view controller for promoting your app's products to users.
 
   spec.source          = { :git => "https://github.com/ChopinDavid/UpsellViewController.git", :tag => "1.0.0" }
 
-  spec.source_files    = "Library/**/*"
+  spec.source_files    = "UpsellViewController"
   spec.resource_bundles = {
-    'UpsellViewController' => ['Library/Resources/*.png', 'Library/**/*.xib']
+    'UpsellViewController' => ['UpsellViewController/*.xib']
   }
 
 end
