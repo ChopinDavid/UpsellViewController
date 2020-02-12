@@ -3,8 +3,8 @@
   <img src="https://raw.githubusercontent.com/ChopinDavid/UpsellViewController/master/upsellLogo.png" alt="Icon"/>
 </p>
 
-  [![GitHub license](https://img.shields.io/cocoapods/l/UpsellViewController.svg)](https://github.com/pmusolino/PMAlertController/blob/master/LICENSE)
-  [![Pod version](https://img.shields.io/cocoapods/v/UpsellViewController.svg?style=flat)](https://cocoapods.org/pods/PMAlertController)
+  [![GitHub license](https://img.shields.io/cocoapods/l/UpsellViewController.svg)](https://github.com/ChopinDavid/UpsellViewController/blob/master/LICENSE)
+  [![Pod version](https://img.shields.io/cocoapods/v/UpsellViewController.svg?style=flat)](https://github.com/ChopinDavid/UpsellViewController)
 
 
 UpsellViewController is a library that lets you create customizable alert view controllers that present products to your app's users. The library is inspired in part by [PMAlertController](https://github.com/pmusolino/PMAlertController).
