@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name            = "UpsellViewController"
-  spec.version         = "1.0.0"
+  spec.version         = "1.0.1"
   spec.summary         = "Customizable view controller for promoting your app's products to users."
 
   spec.description     = <<-DESC
@@ -17,7 +17,7 @@ Customizable view controller for promoting your app's products to users.
   spec.platform        = :ios, "11.0"
   spec.swift_versions  = "5.0"
 
-  spec.source          = { :git => "https://github.com/ChopinDavid/UpsellViewController.git", :tag => "1.0.0" }
+  spec.source          = { :git => "https://github.com/ChopinDavid/UpsellViewController.git", :tag => "1.0.1" }
 
   spec.source_files    = "UpsellViewController"
   spec.resource_bundles = {
