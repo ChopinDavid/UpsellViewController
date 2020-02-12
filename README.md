@@ -58,7 +58,7 @@ $ pod install
 ----------------
 UpsellViewController is extremely easy to use, but requires knowledge of creating custom `UIView`s with XIB files. As a developer, it is your job to create a custom `UIView` as an XIB. This custom `UIView` displays the content you want your user to be able to scroll through. Ideally, this view will display all of the features included in a premium subscription to your application.
 
-It is important to space out the contents of this custom `UIView` based on how many pages you want to paginate in your `UpsellViewController`. For example, if you are initializing your `UpsellViewController` with **five pages**, you will want each focal point of your custom `UIView` to only take up **20%** of your custom view. Similarly, a **three-paged** `UpsellViewController` should make sure each focal point of your custom `UIView` only takes up **30%** of your custom view, and so  on.
+It is important to space out the contents of this custom `UIView` based on how many pages you want to paginate in your `UpsellViewController`. For example, if you are initializing your `UpsellViewController` with **five pages**, you will want each focal point of your custom `UIView` to only take up **20%** of your custom view. Similarly, a **three-paged** `UpsellViewController` should make sure each focal point of your custom `UIView` only takes up **33.33%** of your custom view, and so  on.
 
 #### Show an UpsellViewController with 5 pages of content
 
