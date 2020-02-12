@@ -117,7 +117,7 @@ upsellVC.currentPageIndicatorTintColor = .green
 
 #### 💼 [Linkedin](https://www.linkedin.com/in/david-chopin-505689121/)
 
-#### 💻 [StackOverflow](https://www.linkedin.com/in/david-chopin-505689121/)
+#### 💻 [StackOverflow](https://stackoverflow.com/users/8023531/david-chopin?tab=profile)
 
 **I will be graduating college in May 2020 and am currently looking for a job! :)**
 
