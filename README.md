@@ -67,12 +67,12 @@ let upsellVC = UpsellViewController(title: "Refer a Friend and You'll Both Get B
 
 //Create some actions for your user to interact with the UpsellViewController
 let cancel = UpsellAction(title: "Cancel", style: .cancel)
-upsellVC.addAction(learnMore)
+upsellVC.addAction(cancel)
 
 let doSomeAction = UpsellAction(title: "Do Something", style: .default) {
     print("Did something")
 }
-upsellVC.addAction(referAFriend)
+upsellVC.addAction(doSomeAction)
 
 //Present our UpsellViewController
 present(upsellVC, animated: false, completion: nil)
